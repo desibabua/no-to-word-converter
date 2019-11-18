@@ -1,11 +1,11 @@
-const englishNamesOfDefaultNumbers = require('./defaultNumbers.js').englishNamesOfDefaultNumbers; 
+const defaultNumInWords = require('./defaultNumbers.js').defaultNumInWords; 
 
 const forTwoNumber = function(number) {
   let desireNoSet = [];
   let noDivider = 10;
   let suffix = number % noDivider
   let prefix = Math.floor(number / noDivider) * noDivider
-  if(englishNamesOfDefaultNumbers[number] === undefined) {
+  if(defaultNumInWords[number] === undefined) {
     desireNoSet.unshift(suffix);
     desireNoSet.unshift(prefix);
     return desireNoSet;
@@ -26,7 +26,7 @@ const complexNoConverter = function(givenNo) {
 };
 
 const reducer = function(desiredOutput, inputElement ) {
-  return desiredOutput +" " + englishNamesOfDefaultNumbers[inputElement]
+  return desiredOutput +" " + defaultNumInWords[inputElement]
 };
 
 const converter = function(givenNumber) {
@@ -35,5 +35,5 @@ const converter = function(givenNumber) {
 }
 
 
-exports.englishNamesOfDefaultNumbers = englishNamesOfDefaultNumbers;
+exports.defaultNumInWords = defaultNumInWords;
 exports.converter = converter;

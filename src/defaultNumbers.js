@@ -1,4 +1,4 @@
-const englishNamesOfDefaultNumbers = {
+const defaultNumInWords = {
   0 :  "zero",
   1 :  "one",
   2 :  "two",
@@ -30,4 +30,4 @@ const englishNamesOfDefaultNumbers = {
   100 : "hundred"
 }
 
-exports.englishNamesOfDefaultNumbers = englishNamesOfDefaultNumbers; 
+exports.defaultNumInWords = defaultNumInWords; 
